@@ -33,7 +33,7 @@ end
 
 # read all languages
 get '/languages' do
-  Language.all.to_json(include: :dev)
+  Language.all.to_json
 end
 
 # read all language with associated dev
@@ -66,6 +66,29 @@ post '/project' do
   project = Project.create(
     project_description: params[:project_description]
   )
+project.to_json
 end
+
+# read all projects
+get '/projects' do
+  Project.all.to_json
+end
+
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 end

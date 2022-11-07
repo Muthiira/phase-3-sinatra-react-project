@@ -17,7 +17,7 @@ puts "done creating devs!"
 
 puts "creating projects..."
 
-5.times do
+35.times do
 	Project.create(project_description: Faker::Lorem.sentence)
    end
 
