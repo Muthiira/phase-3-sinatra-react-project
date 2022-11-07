@@ -10,9 +10,9 @@ class ApplicationController < Sinatra::Base
     Dev.all.to_json
   end
 
-#   get '/dev/:id' do
-#     Dev.find(params[:id]).to_json
-#   end
+  get '/dev/:id' do
+    Dev.find(params[:id]).to_json
+  end
 
 #   get '/dev/:id/languages' do
 #     Dev.find(params[:id]).to_json(include: :languages)
