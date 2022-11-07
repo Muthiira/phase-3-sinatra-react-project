@@ -41,5 +41,23 @@ get '/language/:id' do
   Language.find(params[:id]).to_json(include: :dev)
 end
 
+# update language
+patch '/language/:id' do
+  language = Language.find(params[:id])
+  language.update(
+        language: params[:language],
+        experience: params[:experience],
+        dev_id: params[:dev_id],
+        project_id: params[:project_id]
+  )
+  {message: "Language updated!"}.to_json
+end
+
+# delete language
+delete '/language/:id' do
+language = Language.find(params[:id])
+language.destroy
+{message: "Language '#{languages.language}' has been deleted."}.to_json
+end
 
 end
