@@ -29,9 +29,9 @@ class ApplicationController < Sinatra::Base
 end
 
 
-# get '/languages' do
-#   Language.all.to_json(include: :dev)
-# end
+get '/languages' do
+  Language.all.to_json(include: :dev)
+end
 
 
 # get '/language/:id' do
