@@ -75,7 +75,10 @@ get '/projects' do
 end
 
 
-# 
+# read all project with associated dev
+get '/dev/:id/projects' do
+  Dev.find(params[:id]).to_json(include: :projects)
+end
 
 
 
