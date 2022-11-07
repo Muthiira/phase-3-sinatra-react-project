@@ -14,10 +14,13 @@ class ApplicationController < Sinatra::Base
     Dev.find(params[:id]).to_json
   end
 
+  # get one dev and languages
   get '/dev/:id/languages' do
     Dev.find(params[:id]).to_json(include: :languages)
   end
 
+  # crud operations for languages
+  # create language
   post '/language' do
     language = Language.create(
         language: params[:language],
@@ -28,12 +31,12 @@ class ApplicationController < Sinatra::Base
     language.to_json
 end
 
-
+# read all languages
 get '/languages' do
   Language.all.to_json(include: :dev)
 end
 
-
+# read all language with associated dev
 get '/language/:id' do
   Language.find(params[:id]).to_json(include: :dev)
 end
