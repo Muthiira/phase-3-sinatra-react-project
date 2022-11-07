@@ -18,15 +18,15 @@ class ApplicationController < Sinatra::Base
     Dev.find(params[:id]).to_json(include: :languages)
   end
 
-#   post '/language' do
-#     language = Language.create(
-#         language: params[:language],
-#         experience: params[:experience],
-#         dev_id: params[:dev_id],
-#         project_id: params[:project_id]
-#     )
-#     language.to_json
-# end
+  post '/language' do
+    language = Language.create(
+        language: params[:language],
+        experience: params[:experience],
+        dev_id: params[:dev_id],
+        project_id: params[:project_id]
+    )
+    language.to_json
+end
 
 
 # get '/languages' do
