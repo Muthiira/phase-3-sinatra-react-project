@@ -34,9 +34,9 @@ get '/languages' do
 end
 
 
-# get '/language/:id' do
-#   Language.find(params[:id]).to_json(include: :dev)
-# end
+get '/language/:id' do
+  Language.find(params[:id]).to_json(include: :dev)
+end
 
 
 end
