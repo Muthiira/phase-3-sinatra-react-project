@@ -60,6 +60,12 @@ language.destroy
 {message: "Language '#{languages.language}' has been deleted."}.to_json
 end
 
-
+# crud operations for project
+# create project
+post '/project' do
+  project = Project.create(
+    project_description: params[:project_description]
+  )
+end
 
 end
