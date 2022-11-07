@@ -14,9 +14,9 @@ class ApplicationController < Sinatra::Base
     Dev.find(params[:id]).to_json
   end
 
-#   get '/dev/:id/languages' do
-#     Dev.find(params[:id]).to_json(include: :languages)
-#   end
+  get '/dev/:id/languages' do
+    Dev.find(params[:id]).to_json(include: :languages)
+  end
 
 #   post '/language' do
 #     language = Language.create(
