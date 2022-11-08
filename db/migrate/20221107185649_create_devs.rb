@@ -5,6 +5,7 @@ class CreateDevs < ActiveRecord::Migration[6.1]
       t.string :image_url
       t.string :github_url
       t.integer :age
+      # location
     end
   end
 end

@@ -57,7 +57,7 @@ end
 delete '/language/:id' do
 language = Language.find(params[:id])
 language.destroy
-{message: "Language '#{languages.language}' has been deleted."}.to_json
+language.to_json
 end
 
 # crud operations for project
