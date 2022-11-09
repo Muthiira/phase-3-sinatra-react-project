@@ -108,6 +108,12 @@ dev = Dev.find(params[:id])
   dev.to_json
 end
 
+# delete
+delete '/devs/:id' do
+  dev = Dev.find(params[:id])
+  dev.destroy
+  dev.to_json
+end
 
 
 
