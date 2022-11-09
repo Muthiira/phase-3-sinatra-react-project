@@ -20,7 +20,7 @@ titles = ['Frontend', 'Backend', 'Fullstack', 'Android']
 		github_url: Faker::Alphanumeric.alpha(number: 10),
 		age: rand(20..60),
 		title: titles.sample,
-		location: Faker::Address.full_address)
+		location: Faker::Address.state)
    end
 
 puts "done creating devs!"
