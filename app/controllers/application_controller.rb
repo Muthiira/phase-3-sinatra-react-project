@@ -37,12 +37,12 @@ get '/languages' do
 end
 
 # read all language with associated dev
-get '/language/:id' do
+get '/languages/:id' do
   Language.find(params[:id]).to_json(include: :dev)
 end
 
 # update language
-patch '/language/:id' do
+patch '/languages/:id' do
   language = Language.find(params[:id])
   language.update(
         language: params[:language],
@@ -54,7 +54,7 @@ patch '/language/:id' do
 end
 
 # delete language
-delete '/language/:id' do
+delete '/languages/:id' do
 language = Language.find(params[:id])
 language.destroy
 language.to_json
@@ -62,7 +62,7 @@ end
 
 # crud operations for project
 # create project
-post '/project' do
+post '/projects' do
   project = Project.create(
     project_description: params[:project_description]
   )
@@ -94,7 +94,19 @@ post '/devs' do
   dev.to_json
 end
 
-
+# patch
+patch '/devs/:id' do
+dev = Dev.find(params[:id])
+  dev.create(
+    name: params[:name],
+    image_url: params[:image_url],
+    github_url: params[:github_url],
+    age: params[:age],
+    title: params[:title],
+    location: params[:location]
+  )
+  dev.to_json
+end
 
 
 
