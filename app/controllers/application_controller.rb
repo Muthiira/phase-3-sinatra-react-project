@@ -10,12 +10,12 @@ class ApplicationController < Sinatra::Base
     Dev.all.to_json
   end
 
-  get '/dev/:id' do
+  get '/devs/:id' do
     Dev.find(params[:id]).to_json
   end
 
   # get one dev and languages
-  get '/dev/:id/languages' do
+  get '/devs/:id/languages' do
     Dev.find(params[:id]).to_json(include: :languages)
   end
 
@@ -76,8 +76,22 @@ end
 
 
 # read all project with associated dev
-get '/dev/:id/projects' do
+get '/devs/:id/projects' do
   Dev.find(params[:id]).to_json(include: :projects)
+end
+
+# crud operations for dev
+# post
+post '/devs' do
+  dev = Dev.create(
+    name: params[:name],
+    image_url: params[:image_url],
+    github_url: params[:github_url],
+    age: params[:age],
+    title: params[:title],
+    location: params[:location]
+  )
+  dev.to_json
 end
 
 
