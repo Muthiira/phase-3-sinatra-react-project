@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_07_185703) do
+ActiveRecord::Schema.define(version: 2022_11_09_091651) do
 
   create_table "devs", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
     t.string "github_url"
     t.integer "age"
+    t.string "title"
+    t.string "location"
   end
 
   create_table "languages", force: :cascade do |t|
