@@ -3,9 +3,12 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 # so you can run the seed file multiple times without having duplicate entries in your database
 puts "Deleting old data..."
-Project.destroy_all
-Dev.destroy_all
-Language.destroy_all
+# # Project.destroy_all
+# # Dev.destroy_all
+# # Language.destroy_all
+# rake db:drop
+# rake db:create
+# rake db:migrate
 
 puts "creating devs..."
 
