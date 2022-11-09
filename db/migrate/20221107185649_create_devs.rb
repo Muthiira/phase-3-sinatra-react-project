@@ -6,6 +6,7 @@ class CreateDevs < ActiveRecord::Migration[6.1]
       t.string :github_url
       t.integer :age
       # location
+      # title
     end
   end
 end
