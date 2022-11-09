@@ -45,10 +45,8 @@ end
 patch '/languages/:id' do
   language = Language.find(params[:id])
   language.update(
-        language: params[:language],
-        experience: params[:experience],
-        dev_id: params[:dev_id],
-        project_id: params[:project_id]
+        # 
+        params
   )
   {message: "Language updated!"}.to_json
 end
@@ -101,12 +99,7 @@ dev = Dev.find(params[:id])
 #   updat
 # end
   dev.update(
-    name: params[:name],
-    image_url: params[:image_url],
-    github_url: params[:github_url],
-    age: params[:age],
-    title: params[:title],
-    location: params[:location]
+  params
   )
   dev.to_json
 end
