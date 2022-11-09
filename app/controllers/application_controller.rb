@@ -97,7 +97,10 @@ end
 # patch
 patch '/devs/:id' do
 dev = Dev.find(params[:id])
-  dev.create(
+# params.each do |param|
+#   updat
+# end
+  dev.update(
     name: params[:name],
     image_url: params[:image_url],
     github_url: params[:github_url],
