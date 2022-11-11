@@ -45,6 +45,7 @@ skills = ['CSS', 'React', 'Python', 'Ruby', 'RubyonRails', 'C', 'C#', 'C++', 'HT
 		  )
 	end
 end
+puts "Creating github accounts..."
 
 
 puts "✅ Done seeding!"
