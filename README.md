@@ -8,4 +8,8 @@ sinatra was useful in creating the database.
 Migrations and active records was useful in writing the tables.
 
 ## link to the backend resources
-
+https://devs35.herokuapp.com/devs
+https://devs35.herokuapp.com/languages
+https://devs35.herokuapp.com/projects
+https://devs35.herokuapp.com/devs/:id/projects
+https://devs35.herokuapp.com/devs/:id/languages
