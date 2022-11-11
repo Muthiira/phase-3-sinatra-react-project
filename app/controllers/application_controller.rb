@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
 
   # crud operations for languages
   # create language
-  post '/language' do
+  post '/languagesg' do
     language = Language.create(
         language: params[:language],
         experience: params[:experience],
